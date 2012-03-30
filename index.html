@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	
+	<title>Image Viewer</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="css/viewer.css" type="text/css"/>
+	
+</head>
+<body>
+	
+	<div id="holder">
+		<div id="app">
+			
+			<div class="list-holder">
+				
+				<div class="list-title-holder">
+					<span class="list-title title-text bright-text">Black Metal</span>
+					<span class="list-image-count total-count dark-text"></span>
+				</div><!-- list-title-holder -->
+				
+				<div class="list-header-holder">
+					<span class="list-header-title list-header-text">Title</span>
+					<span class="list-header-saved list-header-text">Saved</span>
+					<span class="list-header-rating list-header-text">*/5</span>
+				</div><!-- list-header-holder -->
+				
+				<div class="list-scrollable-holder">
+					<div class="list-scrollable-inner"></div>
+				</div><!-- list-scrollable-holder -->
+				<div class="scrollbar">
+					<div class="scroll-handle"></div>
+				</div><!-- scrollbar -->
+				
+				<div class="tab-holder">
+					<div class="tab-all list-tab tab-selected" title="All Images"><span>All</span></div>
+					<div class="tab-saved list-tab" title="Saved Images"><span>Saved</span></div>
+				</div><!-- tab-holder -->
+				
+			</div><!-- list-holder -->
+			
+			<div class="view-holder">
+				
+				<div class="image-holder">
+					<img src="" alt="" />
+				</div><!-- image-holder -->
+				
+				<div class="view-info">
+					<p></p>
+				</div><!-- view-info -->
+				
+				<div class="context-holder">
+					<div class="prev-thumb context-thumb">
+						<img src="" alt="" />
+					</div><!-- prev-thumb -->
+					<div class="next-thumb context-thumb">
+						<img src="" alt="" />
+					</div><!-- next-thumb -->
+				</div><!-- context-holder -->
+				
+				<div class="view-control-holder">
+					<ul>
+						<li class="view-title title-text bright-text"></li>
+						<li class="prev-arrow view-arrow" title="Previous"></li>
+						<li class="view-image-count"><span class="current-image-count bright-text"></span><span class="total-image-count dark-text"></span></li>
+						<li class="next-arrow view-arrow" title="Next"></li>
+						<li class="info-icon"></li>
+						<li class="save-icon" title="Save"></li>
+						<li class="rating-holder">
+							<ul>
+								<li class="rating-dot" title="1/5"></li>
+								<li class="rating-dot" title="2/5"></li>
+								<li class="rating-dot" title="3/5"></li>
+								<li class="rating-dot" title="4/5"></li>
+								<li class="rating-dot" title="5/5"></li>
+							</ul>
+						</li><!-- rating-holder -->
+					</ul>
+					
+						
+				</div><!-- view-control-holder -->
+				
+			</div><!-- view-holder -->
+			
+		</div><!-- app -->
+	</div><!-- holder -->
+	
+	<script type="text/template" id="template-list-item">
+		<span class="list-item-title"><span class="bright-text"><%=id%>.</span> <span><%=listName%></span></span>
+		<span class="list-saved"><div></div></span>
+		<span class="list-rating bright-text"><%=rating%></span>
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.json-2.3.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/backbone.js"></script>
+	<script type="text/javascript" src="js/viewer.js"></script>
+	
+</body>
+</html>
