@@ -469,7 +469,7 @@
 		}
 	});
 	
-	//ROUNTER - handles navigation within the app
+	//ROUTER - handles navigation within the app
 	var Router = Backbone.Router.extend({
 		routes: {
 			'' : 'start',
